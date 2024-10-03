@@ -1,0 +1,70 @@
+body {
+    font-family: 'Times New Roman', Times, serif; /* Alterado para Times New Roman */
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.row {
+    margin-bottom: 40px; /* Aumenta o espaço entre as linhas */
+}
+
+.book {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    border-radius: 30px; /* Aumente este valor para mais arredondamento */
+    min-height: 500px; /* Altura mínima */
+    margin: 40px; /* Espaçamento entre os containers */
+    display: flex; /* Flexbox aplicado para centralização */
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    align-items: center;
+}
+
+.book img {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px; /* Espaço entre a imagem e o título/autor */
+}
+
+.book-info {
+    text-align: center;
+}
+
+.title {
+    margin: 0; /* Remove margens padrão */
+    font-size: 1.2em; /* Tamanho da fonte ajustado */
+    font-weight: bold; /* Deixa o título em negrito */
+}
+
+.author {
+    margin: 0; /* Remove margens padrão */
+    color: black; /* Define a cor do autor igual à do título */
+    font-size: 1.2em; /* Define o mesmo tamanho de fonte para o autor */
+    padding-top: 5px; /* Adiciona um espaço entre o título e o autor */
+}
+
+/* Estilo para o título principal da página */
+.title-main {
+    margin: 0; /* Removendo todas as margens do título */
+    display: inline-block; /* Fazendo o título ocupar apenas o espaço necessário */
+    position: relative; /* Para permitir que o pseudo-elemento seja posicionado corretamente */
+    font-family: 'Times New Roman', Times, serif; /* Aplicando Times New Roman ao título principal */
+}
+
+.title-main::after {
+    content: ''; /* Cria um elemento vazio */
+    display: block; /* Faz o pseudo-elemento ocupar espaço */
+    width: 100px; /* Largura da linha */
+    height: 2px; /* Altura da linha */
+    background-color: black; /* Cor da linha */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    position: absolute; /* Permite que o elemento seja posicionado */
+    left: 0; /* Alinha à esquerda do título */
+    bottom: -2px; /* Ajuste para a linha ficar imediatamente abaixo do título */
+}
